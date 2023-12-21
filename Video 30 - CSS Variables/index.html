@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        :root{
+            --color: blue;
+            --seccolor: rgb(142, 142, 255);
+            --defpad: 23px;
+            --defop: 0.5;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div:first-child{
+            background-color: var(--color);
+        }
+
+        .container{
+            background-color: var(--seccolor);
+        }
+
+        ul{
+            display: flex;
+        }
+
+        ul li{
+            opacity: var(--defop);
+            list-style: none;
+            padding: 5px var(--defpad);
+            border: 2px solid var(--seccolor)
+        }
+
+        ul li:hover{
+            opacity: 1;
+            color: white;
+        }
+
+        ul li:first-child{
+            --color: rgb(255, 149, 0);
+            background-color: var(--colorr, red);
+            /* fallback variable */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, nostrum repudiandae vel ab eum facere aliquam! Amet, non inventore mollitia debitis aspernatur tenetur ad explicabo saepe, beatae error perspiciatis ratione? Debitis fugit nulla iste nostrum soluta commodi, minima ea saepe labore inventore, sint quas necessitatibus.
+    </div>
+</body>
+</html>
+
+<!-- CSS variables, also known as custom properties, are a way to store and reuse values in your CSS files. They provide a way to define values once and reuse them throughout your stylesheets, making it easier to maintain and update your code. CSS variables begin with two hyphens (--) followed by a name.
+
+:root {
+  --main-color: #3498db;
+  --font-size: 16px;
+}
+
+body {
+  background-color: var(--main-color);
+  font-size: var(--font-size);
+}
+The :root selector is used to define global CSS variables. It is similar to the html selector but is typically preferred for declaring root-level variables. -->
+
