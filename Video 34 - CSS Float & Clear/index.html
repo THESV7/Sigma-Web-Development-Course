@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float & Clear</title>
+    <style>
+        .cards{
+            border: 2px solid black;
+            display: flow-root;
+        }
+        img{
+            float: left;
+        }
+        .card{
+            border: 2px solid red;
+        }
+
+        .card:nth-child(3){
+            background-color: aqua;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="https://t4.ftcdn.net/jpg/05/87/94/83/360_F_587948352_9uGR8xUlM7PgKj9VyQfZyIbfa4HARd6P.jpg" alt="" width="230px">
+        <div class="card">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur laudantium dolorum ipsa dicta labore corrupti qui magni illo, harum error quasi, perferendis esse aperiam praesentium ea consequatur, eum mollitia. Obcaecati deserunt pariatur dolorem enim!</p>
+        </div>
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt sequi accusamus aut suscipit libero quod ad molestias itaque quaerat unde magnam veritatis culpa modi amet porro, nobis fugiat architecto doloremque saepe illum voluptates in. Asperiores ab molestias ad illo. Suscipit reprehenderit, itaque sed iusto voluptatum magni laborum commodi quis eum quia tempora doloribus, perspiciatis adipisci at natus sunt recusandae consectetur. Consequatur debitis sunt qui reprehenderit labore aliquam quasi provident consectetur magnam cum officiis, vitae odit quisquam. Adipisci autem quibusdam quod id nihil error aut, dignissimos facere voluptate esse maiores dolor exercitationem iusto odio molestiae voluptatem quidem perspiciatis praesentium et. Numquam, temporibus molestias iste incidunt pariatur debitis? Eligendi eos atque voluptate explicabo doloribus. Tempore magnam fugiat dolore hic nulla molestias, fugit magni dolores voluptatibus quae autem tenetur recusandae a iusto quos animi earum ratione ducimus in repudiandae sint enim? Unde, aut dignissimos adipisci ratione temporibus commodi dicta nobis assumenda tenetur eligendi molestias atque ea maiores autem. Doloribus rem, laudantium praesentium quaerat minima laborum ad eos aut possimus ipsa hic asperiores consequuntur sapiente ducimus. Beatae inventore doloribus facere distinctio autem eos laborum iste. Ipsam in consectetur exercitationem praesentium pariatur fugit placeat nemo et. Ex nemo, necessitatibus culpa fuga perspiciatis sunt porro mollitia deleniti expedita, rerum magnam molestiae incidunt natus. Quae placeat sint exercitationem culpa quas et facilis ratione expedita quasi eaque, delectus nemo voluptates, nobis praesentium aliquid rem reiciendis debitis modi. Asperiores dignissimos quidem officia fugit sunt, officiis qui optio illum exercitationem voluptates provident quo ex reiciendis, debitis rerum rem sequi quaerat animi, quibusdam incidunt quasi ipsa. Ducimus non amet ut distinctio at, reprehenderit quod, reiciendis eum modi, sunt mollitia deleniti explicabo sapiente facilis similique blanditiis. Laudantium at veniam neque corrupti placeat! Nihil laboriosam aspernatur quod blanditiis optio nisi quam fugit non ut ullam aperiam porro temporibus natus architecto quas illo quis, excepturi ex nobis adipisci vel odio. Corrupti reiciendis, deserunt, fugiat delectus ad, ratione blanditiis magni magnam veritatis commodi cumque ullam. Amet optio deserunt, facilis nostrum deleniti maiores fugiat dolorem, nesciunt quis delectus ratione!</div>
+        <div class="card">Card 3</div>
+    </div>
+</body>
+</html>
+
+<!-- What is the essence of this video: 
+1. float: left; or float: right; => provides display-flex-like properties. but can be controlled by its position interchanging the value left and right. 
+2. If the content is bigger than the size of the other divs then the content will overflow. 
+3. To prevent the overflow, simply use the CSS property display: flow-root;
+4. To avoid an item from overlapping with another div simply use the CSS property clear: left, clear: right, or clear: both; as per the requirement. -->
